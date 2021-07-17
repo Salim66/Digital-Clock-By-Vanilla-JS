@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+/* @font-face {
+  font-family: "clock";
+  src: url("assets/fonts/Digital\ Dismay.otf");
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  display: grid;
+  height: 100%;
+  text-align: center;
+  place-items: center;
+  background: #4b4c4d;
+}
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+.circular .inner,
+.circular .outer,
+.circular .circle {
+  position: absolute;
+  z-index: 6;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+.circular .inner {
+  top: 50%;
+  left: 50%;
+  height: 90px;
+  width: 90px;
+  margin: -45px 0 0 -45px;
+  background-color: #0e0f0f;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.circular .circle {
+  z-index: 1;
+  box-shadow: none;
+}
+.circular .numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 40px;
+  font-weight: 500;
+  color: #f1f2f5;
+}
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+.circle .bar .progress,
+.dot span {
+  background: #464545;
+}
+.circle .left .progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+
+.circle .left_hor .progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+
+.circle .left_min .progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+
+.circle .left_sec .progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+
+.circle .right {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+
+.circle .right .progress {
+  animation: right 4s linear both;
+  animation-delay: 4s;
+}
+
+.circle .right_hor {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+.circle .right_hor .progress {
+  animation: right 4s linear both;
+  animation-delay: 4s;
+}
+
+.circle .right_min {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+.circle .right_hir .progress {
+  animation: right 4s linear both;
+  animation-delay: 4s;
+}
+
+.circle .right_sec {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+.circle .right_sec .progress {
+  animation: right 4s linear both;
+  animation-delay: 4s;
+}
+
+.circle .dot {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 10px;
+  margin-top: -5px;
+  /* animation: dot 8s linear both; */
+  transform-origin: 0% 50%;
+}
+
+.container {
+  width: 480px;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
